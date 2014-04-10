@@ -40,7 +40,7 @@ class Factory(object):
                 cobVersion = robotName[11:].replace('.', '-')
                 rosMaster = "http://cob%s-pc1:11311" % cobVersion
             robot = careobot.CareOBot(robotName, rosMaster)
-        elif robotName.lower().startswith('sunflower'):
+        elif robotName.lower().startswith('sunflower') or robotName.lower().startswith('uh sunflower'):
             import sunflower
             if robot_config.has_key(robotName) and robot_config[robotName].has_key('hostname'):
                 rosMaster = 'http://%s:11311'
